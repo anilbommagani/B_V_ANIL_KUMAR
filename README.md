@@ -1,3 +1,6 @@
+Keystroke logging is the process of recording (logging) the keys pressed on a keyboard (usually when the user is unaware). It is also known as keylogging or keyboard capturing.
+These programs are used for troubleshooting technical problems with computers and business networks. It can also be used to monitor network usages but more often than not it is used for malicious intents like stealing passwords.
+This article illustrates designing a keylogger for windows and Linux.
 keylogger
 Keyloggers are programs that capture your key strokes. They can be used to keep logs of everything you press on the keyboard but on the flip side it can be used for malicious purposes as well.
 
