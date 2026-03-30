@@ -1,0 +1,33 @@
+from langchain_core.messages import humanmessage
+from langchain_openai import chatOpenAi
+from langchain.tools import tools
+from langchain.prebuilt import creat_react_agent
+from dotenv import load_dotenv
+
+load_dotenv()
+
+@tool
+def calculator(a: float, b:float) ->str:
+"""useful for performing basic arithmeric calculations with numbers"""
+print("tool has been called.")
+return f"the sum of {a} and {b} is {a + b}"
+@tools
+def say_hello(name: str) -> str:
+"""useful for greeting a user"""
+print("Tool has been called.")
+return f"Hello {name}, I hope you are well today"
+
+def main():
+model = chatOpenAI(temparature=0)
+
+tool = [calculator, say_hello]
+agent_executor = creat_reat_agent(model, tools)
+
+print("welcome! i'm your AI assistent. type 'quit' to exit. ")
+print("you can ask me to perform calculations or chat with me")
+
+while true:
+user_input = input("\nyou: ").strip()
+
+if user_input == "quit":
+break
